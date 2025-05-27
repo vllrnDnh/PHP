@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+h2, p {
+    text-align: left;
+    padding-left: 30px;
+}
+
+
+.movie-gallery, .mood-gallery {
+    display: flex;
+    justify-content: flex-start; /* changed from center */
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+    padding-left: 30px; /* optional: adds left spacing */
+}
+
+
+.movie{
+    text-align: center;
+    width: 200px;                 /* Consistent width for spacing */
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.mood-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.mood-gallery {
+    display: flex;
+    justify-content: left;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.mood {
+    text-align: center;
+}
+
+.mood img {
+    width: 220px;
+    height: 150px;    
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

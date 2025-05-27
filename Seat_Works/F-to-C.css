@@ -1,0 +1,7 @@
+/* link to the SW3_F-to-C.php */
+
+input[type=text] {
+    width: 200px;
+    padding: 5px;
+    font-size: 16px;
+}

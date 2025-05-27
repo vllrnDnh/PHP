@@ -1,0 +1,64 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url("background-img.jpg");
+    background-repeat: no-repeat;   /* Prevents tiling */
+    background-size: cover;         /* Makes image cover the whole area */
+    background-position: center;    /* Centers the image */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+
+.resume-container {
+    position: relative;
+    width: 800px;
+    margin: 30px auto; /* 30px top and bottom, auto left and right */
+    background: #fff;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+.section {
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 30%;  /* Focus more on right side and down a bit */
+    float: left;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+
+
+
+.skills-list {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #d66ba0;
+}
+
+.highlight {
+    color: #6d28d9;
+}
+
+.ribbon {
+    position: absolute;
+    top: -20px;
+    right: -30px;  /* Moves the ribbon 10px further right */
+    width: 140px;  
+    transform: rotate(10deg);
+    z-index: 10;
+    pointer-events: none;
+}
