@@ -1,0 +1,256 @@
+:root {
+    --color-bg: #f4f6fa;
+    --color-primary: #121926;
+    --color-muted: #9fa4af;
+    --color-hover: #e8ecf4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #dadee5;
+    font-family: sans-serif;
+}
+
+/* Start of Gallery Styles w/ Flip Effect */
+/* Hide checkboxes */
+input {
+    position: absolute;
+    scale: 0;
+}
+
+/* Flex container for gallery */
+.gallery {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 50px 0; /* Adjusted margin for top spacing */
+    flex-wrap: wrap;
+}
+
+/* Card base style */
+article {
+    position: relative;
+    width: 230px;
+    height: 220px;
+    perspective: 1000px;
+    margin-top: 140px;
+    margin-right: 5px;
+    margin-bottom: -125px;
+}
+
+/* Flip containers */
+article .front, article .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 16px;
+    background: #ffffff;
+    transition: transform 0.6s ease-in-out;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Back rotated initially */
+.back {
+    transform: rotateY(180deg);
+}
+
+/* Flip logic when checked */
+input:checked ~ article .front {
+    transform: rotateY(-180deg);
+}
+
+input:checked ~ article .back {
+    transform: rotateY(0);
+}
+
+/* Image styling */
+article span img {
+    width: 190px;
+    height: 180px;
+    object-fit: wrap;
+    border-radius: 5%;
+}
+
+/* SIDE BAR */
+.sidebar {
+    position: fixed;
+    overflow: hidden; /* fixed typo */
+    top: 50px;
+    left: 40px;
+    bottom: 32px;
+    display: flex;
+    height: 780px;
+    flex-direction: column; /* fixed typo */
+    gap: 8px;
+    width: 80px;
+    border-radius: 18px;
+    transition: 0.4s;
+    background: #ffffff;
+}
+
+.sidebar button {
+    border: 0;
+    background: transparent;
+    font-size: 22px;
+    color: inherit;
+    border-radius: 8px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.left, .right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left {
+    z-index: 1;
+    left: 0;
+    width: 80px;
+    background: #ffffff;
+}
+
+.left img {
+    width: 40px;
+    margin: 24px 0 28px;
+    border-radius: 8px;
+}
+
+.left button {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+}
+
+.left button:hover {
+    background: var(--color-bg);
+    color: #384251;
+}
+
+.right {
+    left: 76px;
+    height: 100px;
+    position: relative;
+}
+
+.right-inner {
+    position: absolute;
+    inset: 8px;
+    left: 4px;
+    border-radius: 12px;
+    background: var(--color-bg);
+}
+
+.right .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 16px;
+}
+
+.right h2 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.right h3 {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-muted);
+}
+
+.right nav {
+    padding: 0 12px;
+}
+
+.right button i:last-child {
+    opacity: 0;
+    font-size: 16px;
+    margin-left: auto;
+    transition: 0.3s;
+}
+
+.right button {
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+}
+
+.right button:hover i:last-child {
+    opacity: 1;
+    color: var(--color-muted);
+}
+
+.right button:hover {
+    background: var(--color-hover);
+    color: #384251;
+}
+
+.sidebar:hover {
+    width: 300px;
+}
+
+.sidebar:hover .right {
+    width: 225px;
+}
+
+.submenu {
+    position: relative;
+    list-style: none;
+    padding: 8px 0 8px 28px;
+}
+
+.submenu::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    bottom: 8px;
+    width: 1px;
+    background: var(--color-muted);
+}
+
+.submenu li {
+    white-space: nowrap;
+    height: 36px;
+    padding-left: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.submenu li:hover {
+    background: var(--color-hover);
+    color: #384251;
+    cursor: pointer;
+}
+
+.submenu .badge {
+    font-size: 10px;
+    padding: 3px 5px;
+    border-radius: 4px;
+    background: var(--color-primary);
+    color: #ffffff;
+}

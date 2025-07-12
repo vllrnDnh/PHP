@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sidebar UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Icon library (adjust this based on what you're using) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <!-- GALLERY OF ORGS -->
+    <div class="container">
+
+        <!-- Gallery 1 -->
+        <div class="gallery">
+            <label class="card" data-id="1">
+                <input type="checkbox" />
+                    <article>
+                        <div class="front"><span><img src="Icon_1.png" alt="Org 1" /></span></div>
+                        <div class="back"><span>Organization 1</span></div>
+                    </article>
+            </label>
+
+            <label class="card" data-id="2">
+                <input type="checkbox" />
+                    <article>
+                        <div class="front"><span><img src="Icon_2.jpg" alt="Org 2" /></span></div>
+                        <div class="back"><span>Organization 2</span></div>
+                    </article>
+            </label>
+
+            <label class="card" data-id="1">
+                <input type="checkbox" />
+                    <article>
+                        <div class="front"><span><img src="Icon_3.jpg" alt="Org 1" /></span></div>
+                        <div class="back"><span>Organization 1</span></div>
+                    </article>
+            </label>
+
+            <label class="card" data-id="2">
+                <input type="checkbox" />
+                    <article>
+                        <div class="front"><span><img src="Icon_4.jpg" alt="Org 4" /></span></div>
+                        <div class="back"><span>Organization 4</span></div>
+                    </article>
+            </label>
+        </div>
+
+        <!-- Gallery 2 -->
+         <div class="gallery">
+            <label class="card" data-id="1">
+                <input type="checkbox" />
+                    <article>
+                        <div class="front"><span><img src="Icon_5.jpg" alt="Org 5" /></span></div>
+                        <div class="back"><span>Organization 5</span></div>
+                    </article>
+            </label>
+
+            <label class="card" data-id="2">
+                <input type="checkbox" />
+                    <article>
+                        <div class="front"><span><img src="Icon_6.jpg" alt="Org 6" /></span></div>
+                        <div class="back"><span>Organization 6</span></div>
+                    </article>
+            </label>
+
+            <label class="card" data-id="1">
+                <input type="checkbox" />
+                    <article>
+                        <div class="front"><span><img src="Icon_7.jpg" alt="Org 7" /></span></div>
+                        <div class="back"><span>Organization 7</span></div>
+                    </article>
+            </label>
+
+            <label class="card" data-id="2">
+                <input type="checkbox" />
+                    <article>
+                        <div class="front"><span><img src="Icon_8.png" alt="Org 8" /></span></div>
+                        <div class="back"><span>Organization 8</span></div>
+                    </article>
+            </label>
+        </div>
+
+        <!-- Gallery 3 -->
+        <div class="gallery">
+            <label class="card" data-id="1">
+                <input type="checkbox" />
+                    <article>
+                        <div class="front"><span><img src="Icon_9.jpg" alt="Org 9" /></span></div>
+                        <div class="back"><span>Organization 9</span></div>
+                    </article>
+            </label>
+
+            <label class="card" data-id="2">
+                <input type="checkbox" />
+                    <article>
+                        <div class="front"><span><img src="Icon_10.png" alt="Org 10" /></span></div>
+                        <div class="back"><span>Organization 10</span></div>
+                    </article>
+            </label>
+
+            <label class="card" data-id="1">
+                <input type="checkbox" />
+                    <article>
+                        <div class="front"><span><img src="Icon_11.png" alt="Org 11" /></span></div>
+                        <div class="back"><span>Organization 11</span></div>
+                    </article>
+            </label>
+
+            <label class="card" data-id="2">
+                <input type="checkbox" />
+                    <article>
+                        <div class="front"><span><img src="Icon_12.jpg" alt="Org 12" /></span></div>
+                        <div class="back"><span>Organization 12</span></div>
+                    </article>
+            </label>
+        </div>
+
+    </div>
+
+
+
+    <!-- DASHBOARD SIDEBAR -->
+    <aside class="sidebar"> <!-- was "slidebar", now fixed -->
+        <div class="left">
+            <img src="logo.jpg" alt="Logo" />
+            <button><i class="bi bi-person-circle"></i></button> <!-- using Bootstrap icons -->
+            <button><i class="bi bi-heart"></i></button>
+            <button><i class="bi bi-at"></i></button>
+            <button><i class="bi bi-chat-left-dots"></i></button>
+            <button><i class="bi bi-plus"></i></button>
+        </div>
+        <div class="right">
+            <div class="right-inner">
+                <div class="header">
+                    <div>
+                        <h2>Untitled UI</h2>
+                        <h3>store.untitledui.com</h3>
+                    </div>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <nav>
+                    <button>
+                        <i class="bi bi-columns-gap"></i>
+                        <span>Dashboard</span>
+                    </button>
+
+                    <!-- Products (optional placeholder) -->
+                    <button>
+                        <i class="bi bi-people-fill"></i>
+                        <span>Organizations</span>
+                    </button>
+                    <ul class="submenu">
+                        <li>Academic <span class="badge">9</span></li>
+                        <li>Non-Academic <span class="badge">4</span></li>
+                    </ul>
+
+                    <!-- Customers -->
+                    <button>
+                        <i class="bi bi-check2-square"></i>
+                        <span>Vote Here!</span>
+                    </button>
+                    
+                    <!-- 
+                    <button>
+                        <i class="bi bi-envelope"></i>
+                        <span>Messages</span>
+                        <i class="bi bi-plus"></i>
+                    </button>
+                    <ul class="submenu">
+                        <li>
+                            Drafts
+                            <span class="badge">10</span>
+                        </li>
+                        <li>Scheduled <span class="badge">4</span></li>
+                        <li>Published <span class="badge">20</span></li>
+                    </ul> -->
+
+                </nav>
+            </div>
+        </div>
+    </aside>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
